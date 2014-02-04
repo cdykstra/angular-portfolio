@@ -9,7 +9,7 @@ angular.module('portfolioApp.services', [])
       return $http({
         method: 'JSONP',
         // created a Drupal Services View with no filter
-        url: 'http://webmakerinc.com/api/portfolio/srv_portfolio_nf?callback=JSON_CALLBACK'
+        url: 'http://example.com/<path-to-endpoint>/<resource>?callback=JSON_CALLBACK'
       });
     };
 
@@ -18,7 +18,7 @@ angular.module('portfolioApp.services', [])
       return $http({
         method: 'JSONP',
         // created a separate Services View to filter results
-        url: 'http://webmakerinc.com/api/portfolio/srv_portfolio?nid='+ nid +'&callback=JSON_CALLBACK'
+        url: 'http://example.com/<path-to-endpoint>/<resource>?nid='+ nid +'&callback=JSON_CALLBACK'
       });
     };
 
