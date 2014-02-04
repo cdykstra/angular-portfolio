@@ -1,0 +1,16 @@
+<!-- Use double curly braces to surround properties of the scope to display
+View the console.log(response[0]) for the property names -->
+
+<div class="wrapper">
+
+  <img data-ng-src="http://webmakerinc.com/sites/default/files/{{project.image}}" alt="{{project.project}}">
+
+<h1>{{project.project}}</h1>
+
+<!-- when $scope.project.link is not empty, element is visible. otherwise ng-hide class is added by angular-->
+  <h2 ng-show="project.link"><a href="{{project.link}}" title="{{project.project}}">Visit the live site</a></h2>
+
+
+<p>{{project.body}}</p>
+
+</div>

@@ -1,0 +1,16 @@
+<!-- Use double curly braces to surround properties of the scope to display
+View the console.log(response) for the property names -->
+
+<div class="wrapper">
+      <input type="text" data-ng-model="searchProjects" placeholder="Search for Projects!">
+      <ul>
+        <li class="portfolio" data-ng-repeat="project in projects | filter:searchProjects">
+          <div class="project">
+            <a href="#/{{project.nid}}"><img class="imgLiquidNoFill imgLiquid" data-ng-src="http://webmakerinc.com/sites/default/files/{{project.image}}" alt="{{project.project}}"></a>
+            <br><p><strong>{{project.project}}</strong><br>
+            ({{project.category[0]}})</p> <!-- category is returned as an array
+            in this case. Use console.log in controllers.js to view. -->
+          </div>
+        </li>
+      </ul>
+    </div>
